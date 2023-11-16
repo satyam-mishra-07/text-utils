@@ -10,9 +10,11 @@ export default function Textform(props) {
 
   const handleUpClicked = () => {
     setText(text.toUpperCase());
+    props.showAlert("Converted to uppercase!", "success");
   };
   const handleLwClicked = () => {
     setText(text.toLowerCase());
+    props.showAlert("Converted to lowercase!", "success");
   };
 
   const handleCapitalClicked = () => {
@@ -21,24 +23,29 @@ export default function Textform(props) {
       arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
     }
     setText(arr.join(" "));
+    props.showAlert("Text Capitalized!", "success");
   };
   
   const handleClearClicked = () => {
     setText("");
+    props.showAlert("Text Cleared!", "success");
   };
 
   const handleCopy = () => {
     navigator.clipboard.writeText(text);
+    props.showAlert("Text Copied!", "success");
   }
 
   const handleReverse = () => {
     const newText = text.split('').reverse().join('');
     setText(newText);
+    props.showAlert("Text Reversed!", "success");
   };
 
   const handleExtraSpaces = () => {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "))
+    props.showAlert("Extra Spaces Removed!", "success");
   }
 
   function handleOnChange(event) {

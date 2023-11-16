@@ -57,7 +57,13 @@ export default function Navbar(props) {
                 </li>
                 <li>
                   <a className="dropdown-item" href="/">
-                    <div className="form-check form-switch">
+                      Something
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div className="form-check form-switch">
                       <input
                         className="form-check-input"
                         onClick={props.toggleMode}
@@ -72,22 +78,6 @@ export default function Navbar(props) {
                         Dark Mode
                       </label>
                     </div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-primary" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>

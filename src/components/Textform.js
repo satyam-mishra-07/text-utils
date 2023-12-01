@@ -106,10 +106,10 @@ export default function Textform(props) {
         <div className="container my-3" data-bs-theme={props.mode}>
           <h1>Your Text Summary</h1>
           <p>
-          {text.trim().split(/\s+/).filter(word => word !== '').length} Words and {text.length} Characters
+          {text.split(" ").filter((element)=>{return element.length!=0}).length} Words and {text.length} Characters
           </p>
           <p>
-            It should take {0.008 * text.trim().split(/\s+/).filter(word => word !== '').length} minutes to read this
+            It should take {0.008 * text.split(" ").filter((element)=>{return element.length!=0}).length} minutes to read this
             text.
           </p>
           <h2>Preview</h2>
